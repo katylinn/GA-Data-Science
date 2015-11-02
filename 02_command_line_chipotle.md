@@ -5,10 +5,10 @@
 ##### Q1
 Each column is an item in an order.  For Example, a "Side of Chips" or a "Chicken Burrito".  Each order can contain multiple items, so there is an *order_id* column to identify all the contents of an order.  
 **Rest of the Columns** 
-*quantity* - integer number of identical items in the same order
-*item_name* - string that describes the item (probably very similar to what is listed on the menu)
-*choice_description* - List of modifiers or choices for the item.  For Example, an Izze drink  comes in many flavors, but the drink requested in order 1 is Clemintine Flavored.
-*item_price* - Subtotal for the row ($)
+* *quantity* - integer number of identical items in the same order
+* *item_name* - string that describes the item (probably very similar to what is listed on the menu)
+* *choice_description* - List of modifiers or choices for the item.  For Example, an Izze drink  comes in many flavors, but the drink requested in order 1 is Clemintine Flavored.
+* *item_price* - Subtotal for the row ($)
 
 
 ```sh
