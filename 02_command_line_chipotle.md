@@ -3,11 +3,11 @@
 #### Command Line Tasks
 
 ##### Q1
-Each column is an item in an order.  For Example, a "Side of Chips" or a "Chicken Burrito".  Each order can contain multiple items, so there is an *order_id* column to identify all the contents of an order.  
+Each row represents an item in an order.  For Example, a "Side of Chips" or a "Chicken Burrito".  Each order can contain multiple items, so there is an *order_id* column to identify all the contents of an order.  
 
 **Rest of the Columns** 
-* *quantity* - integer number of identical items in the same order
-* *item_name* - string that describes the item (probably very similar to what is listed on the menu)
+* *quantity* - Integer number of identical items in the same order
+* *item_name* - String that describes the item (probably very similar to what is listed on the menu)
 * *choice_description* - List of modifiers or choices for the item.  For Example, an Izze drink  comes in many flavors, but the drink requested in order 1 is Clementine Flavored.
 * *item_price* - Subtotal for the row ($)
 
@@ -53,7 +53,7 @@ order_id | quantity|	item_name|	choice_description|	item_price
 1834|	1|	Chicken Salad Bowl|	[Fresh Tomato Salsa, [Fajita Vegetables, Pinto Beans, Lettuce]]|	$8.75 
 
 ##### Q2
-Given the readout of the tail above, There appear to be 1834.  One easy check to make sure the list is actually sorted:
+Given the readout of the tail above, There appear to be **1834**.  One easy check to make sure the list is actually sorted:
 
 ```sh
 $ sort -n  chipotle.tsv | tail
@@ -112,7 +112,7 @@ $ python -c "print('There are {} Chicken Burritos'.format(521*1 + 28*2 + 2*3+ 2*
 There are 591 Chicken Burritos
 ```
 
-The conclusion is that the Chicken Burrito is more popular (591>386)
+The conclusion is that the **Chicken Burrito is more popular** (591>386)
 
 ##### Q5
 
@@ -145,7 +145,7 @@ $ grep "4\tChicken Burrito" chipotle.tsv | grep -c "Black Beans"
 $ python -c "print('There are {} Chicken Burritos with Black Beans'.format(261+19*2+4*2))"
 There are 307 Chicken Burritos with Black Beans
 ```
-The conclusion is that Chicken Burritos are more often ordered with Black Beans (307 > 108)
+The conclusion is that **Chicken Burritos are more often ordered with Black Beans** (307 > 108)
 
 Its a little disconcerting that 108+307 != the 591 Chicken Burritos we calculated in the previous question.  It turns out there are several Chicken Burritos with no Beans
 ```sh
@@ -188,7 +188,7 @@ $ find . -regex ".*\.[ct]sv"
 ```
 
 ##### Q7
-The grep command searches recursively across all the files in the repo, and sends the result to the wc command, which counts 48 lines
+The grep command searches recursively across all the files in the repo, and sends the result to the wc command, which counts **48 lines**
 ```sh
 $ grep -r -i "dictionary" . | wc -l
 48
