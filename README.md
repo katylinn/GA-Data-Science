@@ -1,2 +1,2 @@
-## extra_special demo_repo
-Demo Repo for class exercise
+## GA-Data-Science
+Repo for my work in General Assembly's Data Science course
