@@ -147,7 +147,7 @@ There are 307 Chicken Burritos with Black Beans
 ```
 The conclusion is that Chicken Burritos are more often ordered with Black Beans (307 > 108)
 
-Its a little disconcerting that 108+307 is far fewer than the 591 Chicken Burritos we calculated in the previous question.  It turns out there are several Chicken Burritos with no Beans
+Its a little disconcerting that 108+307 != the 591 Chicken Burritos we calculated in the previous question.  It turns out there are several Chicken Burritos with no Beans
 ```sh
 $ grep "1\tChicken Burrito" chipotle.tsv | grep -v -c "Beans"
 178
@@ -157,8 +157,8 @@ $ grep "3\tChicken Burrito" chipotle.tsv | grep -v -c "Beans"
 2
 $ grep "4\tChicken Burrito" chipotle.tsv | grep -v -c "Beans"
 0
-$ python -c "print(178+6*2+2*3)"
-196
+$ python -c "print('There are {} Chicken Burritos with No Beans'.format(178+6*2+2*3))"
+There are 196 Chicken Burritos with No Beans
 ```
 And we also double counted some Burritos with both types of beans (-v flag performs the inverse operation, finding lines without "Beans")
 
@@ -196,7 +196,7 @@ $ grep -r -i "dictionary" . | wc -l
 It is, in fact, approximate, since grep would not count multiple occurrences within the same line.
 
 ##### Q8
-Finding something "interesting" in a data set always feels like a fool's errand, but I did play around with the commands from the advanced section to look at the most common ways to "fix up" the various dishes, ie, the most common collections of toppings from the *choice_description* column.  
+Finding something "interesting" in a data set always feels like a fool's errand, but I did play around with the commands from the advanced section to look at the most common "preparations" for the various dishes, ie, the most common collections of toppings from the *choice_description* column.  
 
 Note: This method assumes that a given collection of ingredients only ever appears in a single order.  Ie, if [X, Y, Z] exists in the set, then [Y, X, Z] does not, nor does any other permutation of the same ingredients.  I believe this assumption holds, but only from my own manual inspection. 
 
